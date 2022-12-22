@@ -1,11 +1,16 @@
-<div class="card" style="width: 28rem;" *ngIf="hero">
-    <div class="card-body">
-        <h5 class="card-title">{{hero.name | uppercase }} Details</h5>
-        <div><span>id: </span> {{hero.id}} </div>
-        <div><span>name: </span>{{hero.name}} </div>
-        <div>
-            <label for="name" class="form-label">Hero Name: </label>
-            <input id="name" class="form-control" [(ngModel)]="hero.name" placeholder="name" />
+<div class="row">
+    <div class="col-sm-6">
+        <button style="margin: 1rem 0 1rem 0; " class="btn btn-warning" (click)="goBack()"><< go back</button>
+        <div class="card" style="width: 28rem;" *ngIf="hero">
+            <div class="card-body">
+                <h5 class="card-title">{{hero.name | uppercase }} Details</h5>
+                <div><span>id: </span> {{hero.id}} </div>
+                <div><span>name: </span>{{hero.name}} </div>
+                <div>
+                    <label for="name" class="form-label">Hero Name: </label>
+                    <input id="name" class="form-control" [(ngModel)]="hero.name" placeholder="name" />
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -4,14 +4,14 @@
         
         <ul class="list-group heroes">
             <li class="list-group-item" *ngFor="let hero of heroes">
-                <button [class.selected]="hero === selectedHero" type="button" class="btn" (click)="onSelectHero(hero)">
-                    <span class="badge bg-primary">{{hero.id}}</span>
-                    <span class="name"> {{hero.name}}</span>
-                </button>
+                <a routerLink="/detail/{{hero.id}}" style="text-decoration: none;">
+                    <span class="btn btn-success" style="margin-right:1rem;">{{hero.id}}</span>
+                     <span>{{hero.name}}</span>
+                </a>
             </li>
         </ul>
     </div>
-    <div class="col-sm-5">
+    <!-- <div class="col-sm-5">
         <app-hero-detail [hero]="selectedHero"></app-hero-detail>
-    </div>
+    </div> -->
 </div>
