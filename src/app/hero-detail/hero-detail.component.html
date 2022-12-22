@@ -1,0 +1,11 @@
+<div class="card" style="width: 28rem;" *ngIf="hero">
+    <div class="card-body">
+        <h5 class="card-title">{{hero.name | uppercase }} Details</h5>
+        <div><span>id: </span> {{hero.id}} </div>
+        <div><span>name: </span>{{hero.name}} </div>
+        <div>
+            <label for="name" class="form-label">Hero Name: </label>
+            <input id="name" class="form-control" [(ngModel)]="hero.name" placeholder="name" />
+        </div>
+    </div>
+</div>

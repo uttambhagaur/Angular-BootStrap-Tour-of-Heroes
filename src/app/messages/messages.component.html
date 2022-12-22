@@ -1,0 +1,10 @@
+<div *ngIf="messageService.messages.length">
+
+    <h2>History</h2>
+    <button type="button" (click)="messageService.clear()" class="btn btn-danger">
+        Clear history
+    </button>
+    <ul class="list-group">
+        <li *ngFor="let message of messageService.messages">{{message}}</li>
+    </ul>
+</div>
