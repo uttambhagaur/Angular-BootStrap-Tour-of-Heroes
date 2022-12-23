@@ -1,5 +1,15 @@
 <h2>My Heroes</h2>
 <div class="row">
+     <div class="col-sm-5">
+        <label for="new-hero">Hero name: </label>
+        <br/>
+        <input class="form-control" id="new-hero" #heroName />
+        <br/>
+        <button type="button" class="btn btn-primary" (click)="add(heroName.value); heroName.value=''">
+            Add hero
+          </button>
+    </div> 
+    <div class="col-sm-2"></div>
     <div class="col-sm-5">
         
         <ul class="list-group heroes">
@@ -11,7 +21,5 @@
             </li>
         </ul>
     </div>
-    <!-- <div class="col-sm-5">
-        <app-hero-detail [hero]="selectedHero"></app-hero-detail>
-    </div> -->
+    
 </div>
